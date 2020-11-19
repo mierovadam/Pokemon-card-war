@@ -3,6 +3,7 @@ package com.example.cardgame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -12,19 +13,24 @@ import android.widget.TextView;
 
 public class WinnerActivity extends AppCompatActivity {
 
-    private ImageView winnerImage;
-    private TextView winner_LBL_name;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_end_of_match);
 
-        winner_LBL_name = findViewById(R.id.winner_LBL_name);
+        TextView  winner_LBL_name   = findViewById(R.id.winner_LBL_name);
+        ImageView winner_IMG_winner = findViewById(R.id.winner_IMG_winner);
+
         String name = getIntent().getStringExtra("winner");
 
-        winner_LBL_name.setText("The winner is " +name+ " !");
+        if(name.equals("Draw"))
+            winner_LBL_name.setText("We have a draw :(");
+        else
+            winner_LBL_name.setText("The winner is " +name+ " !");
+
+        winner_IMG_winner.setImageResource(getIntent().getIntExtra("picId",0));
+
 
         Button winner_BTN_restart = findViewById(R.id.winner_BTN_restart);
 

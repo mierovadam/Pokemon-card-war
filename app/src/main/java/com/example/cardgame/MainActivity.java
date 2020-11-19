@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private Button main_BTN_next;
     private Deck deck;
     private Card leftCard,rightCard;
-    private int winner; //0 for left 1 for right -1 for draw
+    private String winnerName = "Draw";
+    private int winnerImgId;
 
 
     @Override
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         main_BTN_next =         findViewById(R.id.main_BTN_next);
 
         deck = new Deck();
+
 
         main_BTN_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,25 +70,28 @@ public class MainActivity extends AppCompatActivity {
         }else if(leftCard.getValue() < rightCard.getValue()) {
             rightScore++;
             main_LBL_rightScore.setText(""+rightScore);
-        } else if(leftCard.getValue() == rightCard.getValue()) {
-            //draw add indicator
         }
 
-        if (deck.getCardsLeft() == 0) {  //wait a 2 seconds and then display winner
+        if (deck.getCardsLeft() == 0) {
             if(leftScore == rightScore){
-                winner = -1;
+                winnerName = "Draw";
             }else if(leftScore>rightScore){
-                winner = 1;
+                winnerName = main_LBL_leftName.getText().toString();
+                winnerImgId = R.drawable.charmander;
             } else {
-                winner = 2;
+                winnerName = main_LBL_rightName.getText().toString();
+                winnerImgId = R.drawable.squirtle;
             }
+
             openEndOfMatchActivity();
         }
     }
 
     private void openEndOfMatchActivity() {
         Intent intent = new Intent(this, WinnerActivity.class);
-        intent.putExtra("winner",main_LBL_leftName.getText());
+        intent.putExtra("winner",winnerName);
+        intent.putExtra("picId",winnerImgId);
+
 
         startActivity(intent);
         finish();
@@ -100,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         img.setImageResource(id);
     }
 
+    /* not used yet
     public void restart(){
         deck = new Deck();
         leftScore = 0;
@@ -109,6 +115,6 @@ public class MainActivity extends AppCompatActivity {
         main_IMG_leftCard.setImageResource(R.drawable.turned_card);
         main_IMG_leftCard.setImageResource(R.drawable.turned_card);
     }
-
+    */
 
 }

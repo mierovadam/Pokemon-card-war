@@ -4,7 +4,6 @@ public class Card {
     private int value;
     private Suit suit;
 
-
     public Card(){};
 
     public Card(int value,Suit suit){

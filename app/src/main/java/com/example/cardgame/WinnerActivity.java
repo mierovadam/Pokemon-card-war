@@ -3,7 +3,6 @@ package com.example.cardgame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -17,7 +16,7 @@ public class WinnerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_end_of_match);
+        setContentView(R.layout.winner_activity);
 
         TextView  winner_LBL_name   = findViewById(R.id.winner_LBL_name);
         ImageView winner_IMG_winner = findViewById(R.id.winner_IMG_winner);

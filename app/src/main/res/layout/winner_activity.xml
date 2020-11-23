@@ -19,21 +19,22 @@
         android:textSize="50sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/winner_BTN_restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="29dp"
-        android:text="Play again !" />
-
     <ImageView
         android:id="@+id/winner_IMG_winner"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_above="@id/winner_BTN_restart"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="34dp"
         app:srcCompat="@drawable/bulbasaur" />
+
+    <Button
+        android:id="@+id/winner_BTN_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp"
+        android:text="Play again !" />
+
+
 </RelativeLayout>

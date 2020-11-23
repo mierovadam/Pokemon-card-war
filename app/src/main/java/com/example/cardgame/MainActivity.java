@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("winner",winnerName);
         intent.putExtra("picId",winnerImgId);
 
-
         startActivity(intent);
         finish();
     }

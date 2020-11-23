@@ -12,7 +12,6 @@ public class Deck {
     private int cardsLeft = 0;
 
 
-
     public Deck() {
         this.deck = new ArrayList<Card>();
         createDeck();

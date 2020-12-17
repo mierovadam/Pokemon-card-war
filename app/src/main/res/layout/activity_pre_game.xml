@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pre_LAY_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:orientation="horizontal"
+    tools:context=".activities.PreGameActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <ImageView
+            android:id="@+id/pre_IMG_leftPokemon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/pre_ETXT_leftName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Name"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:layout_below="@+id/pre_IMG_leftPokemon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/pre_ETXT_leftName"
+            android:layout_marginTop="32dp"
+            >
+            <ImageView
+                android:id="@+id/pre_IMG_leftSquirtle"
+                android:tag="squirtle"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:onClick="pickLeftPokemon"
+                />
+            <ImageView
+                android:id="@+id/pre_IMG_leftCharmander"
+                android:tag="charmander"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:onClick="pickLeftPokemon"
+                />
+            <ImageView
+                android:id="@+id/pre_IMG_leftBulbasaur"
+                android:tag="bulbasaur"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:onClick="pickLeftPokemon"
+                />
+            <ImageView
+                android:id="@+id/pre_IMG_leftPikachu"
+                android:tag="pikachu"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:onClick="pickLeftPokemon"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/pre_IMG_logo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            />
+
+        <Button
+            android:id="@+id/pre_BTN_start"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/play_button"
+            app:backgroundTint="#00000000"
+            app:backgroundTintMode="add"
+            />
+        <Button
+            android:id="@+id/pre_BTN_return"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/return_button"
+            app:backgroundTint="#00000000"
+            app:backgroundTintMode="add"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <ImageView
+            android:id="@+id/pre_IMG_rightPokemon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:id="@+id/pre_ETXT_rightName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Name"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:layout_below="@+id/pre_IMG_rightPokemon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/pre_ETXT_rightName"
+            android:layout_marginTop="32dp">
+
+            <ImageView
+                android:id="@+id/pre_IMG_rightSquirtle"
+                android:tag="squirtle"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:onClick="pickRightPokemon"
+                />
+            <ImageView
+                android:id="@+id/pre_IMG_rightCharmander"
+                android:tag="charmander"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:onClick="pickRightPokemon"
+                />
+            <ImageView
+                android:id="@+id/pre_IMG_rightBulbasaur"
+                android:tag="bulbasaur"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:onClick="pickRightPokemon"
+                />
+            <ImageView
+                android:id="@+id/pre_IMG_rightPikachu"
+                android:tag="pikachu"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:onClick="pickRightPokemon"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

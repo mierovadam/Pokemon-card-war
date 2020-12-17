@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WinnerActivity"
+    android:background="@drawable/winner_background">
+
+    <TextView
+        android:id="@+id/winner_LBL_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Winner"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/winner_IMG_winner"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/winner_LBL_name"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/winner_BTN_restart"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/winner_IMG_winner"
+        android:backgroundTint="#03c04a"
+        android:text="Play again !" />
+    <Button
+        android:id="@+id/winner_BTN_menu"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/winner_BTN_restart"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#03c04a"
+        android:text="Menu" />
+
+
+</RelativeLayout>

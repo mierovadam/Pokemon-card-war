@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".activities.MenuActivity">
+
+    <ImageView
+        android:id="@+id/menu_IMG_logo"
+        android:layout_width="300dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/menu_BTN_startGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_IMG_logo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#03c04a"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/menu_BTN_topTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_BTN_startGame"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#03c04a"
+        android:text="Top 10" />
+
+</RelativeLayout>
